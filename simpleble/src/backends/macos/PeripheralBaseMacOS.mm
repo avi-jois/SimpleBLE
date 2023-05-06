@@ -18,6 +18,7 @@ typedef struct {
     std::function<void(SimpleBLE::ByteArray)> valueChangedCallback;
 } characteristic_extras_t;
 
+__attribute__((objc_direct_members))
 @interface PeripheralBaseMacOS () {
     // NOTE: This dictionary assumes that all characteristic UUIDs are unique, which could not always be the case.
     std::map<std::string, characteristic_extras_t> characteristic_extras_;
@@ -34,6 +35,7 @@ typedef struct {
 
 @end
 
+__attribute__((objc_direct_members))
 @implementation PeripheralBaseMacOS
 
 - (instancetype)init:(CBPeripheral*)peripheral centralManager:(CBCentralManager*)centralManager {

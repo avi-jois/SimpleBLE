@@ -5,6 +5,7 @@
 #import "LoggingInternal.h"
 #import "Utils.h"
 
+__attribute__((objc_direct_members))
 @interface AdapterBaseMacOS () {
 }
 
@@ -15,6 +16,7 @@
 
 @end
 
+__attribute__((objc_direct_members))
 @implementation AdapterBaseMacOS
 
 - (bool)isBluetoothEnabled {
